@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+
+    }
+
+    .container{
+        border: black solid 1px ;
+        border-radius: 10px ;
+        padding: 10px;
+
+    }
+    .container h2{
+        text-align: center;
+        
+    }
+    .container label{
+        font-size: 20px;
+        margin-left: 3%;
+        font-weight: bold;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="login">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="email" id="user" placeholder="Enter Username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="pass" placeholder="hidden" required>
+            </div>
+            <br>
+            <button type="submit">Log In</button>
+            <div class="errormsg" id="errormsg"></div>
+        </form>
+    </div>
+    <script>
+        const form=document.getElementById('login');
+        const errormsg=document.getElementById('errormsg');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const user= document.getElementById('user').value.trim();
+            const pass= document.getElementById('pass').value.trim();
+
+            if(user==="block@gmail.com"&&pass==="Siren"){
+                alert("login Successfully");
+
+                errormsg.textContent="";
+
+                window.location.href="dashoard.html";
+            }else{
+                errormsg.textContent="invalid username or password";
+            
+
+        }
+    })
+
+
+
+    </script>
+</body>
+</html>
