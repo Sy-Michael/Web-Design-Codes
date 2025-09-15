@@ -1,0 +1,64 @@
+
+nav{
+  gap: 30px;
+  display: flex;
+  background-color: gray;
+  padding: 8px;
+}
+
+nav a {
+  background-color: black;
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+}
+a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.10);
+  transition: 0.5s;
+  border: solid 1px darkblue;
+}
+
+body {
+background-color: black;
+margin: 0;
+text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+p {
+  color: white;
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: border-color 0.25s;
+ 
+}
+button:hover {
+  background-color: lightcyan;
+  color: black;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
