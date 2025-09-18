@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "CreateEditInfo";
+}
+@model EmployeeManagement.Models.Employee
+<div class="text-center">
+    <h1 class="display-4">Create or Edit an Employee Info</h1>
+
+</div>
+<form asp-action="CreateEditInfoForm" asp-controller="Home">
+
+    <input hidden class=" form-control" type="number" asp-for="ListId" />
+    <label class="mt-3">EmployeeId </label>
+    <input class=" form-control" type="text" placeholder="Id" asp-for="Id"  />
+
+    <label class="mt-3">Name </label>
+    <input class=" form-control" type="text" placeholder="Name" asp-for="Name" step="0.01" />
+
+    <label class="mt-3">Position</label>
+    <input class=" form-control" type="text" placeholder="Position" asp-for="Position" step="0.01" />
+
+    <label class="mt-3">Department</label>
+    <input class=" form-control" type="text" placeholder="Department" asp-for="Department" step="0.01" />
+
+    <label class="mt-3">Status</label>
+    <input class=" form-control" type="text" placeholder="Status" asp-for="Status" step="0.01" />
+
+    <button class="btn btn-primary mt-3" type="submit">Ok</button>
+</form>

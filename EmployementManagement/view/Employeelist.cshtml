@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Employesslist";
+}
+@model List<Employee>
+
+<div class="text-center">
+    <h1 class="display-4">Employees' Info</h1>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th> EmployeeId</th>
+                <th> Name  </th>
+                <th> Position</th>
+                <th>Department </th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @{
+                foreach (var  Employee in Model)
+                {
+                    <tr>
+                        <td> @Employee.Id </td>
+                        <td> @Employee.Name </td>
+                        <td> @Employee.Position </td>
+                        <td> @Employee.Department </td>
+                        <td> @Employee.Status </td>
+                        <td>
+                            <a asp-action="CreateEditInfo" asp-route-id="@Employee.ListId">Edit</a>
+                            <a asp-action="DeleteInfo" asp-route-id="@Employee.ListId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
